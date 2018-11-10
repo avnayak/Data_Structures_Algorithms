@@ -42,7 +42,7 @@ a_list.pop(3)
 print a_list
 my_health=(1,2,3,)#tuples are list but there are immutable as they cant be changed after creation
 list(my_health)
-#my_health.append(0)#as tuples are immutable list methods wont work
-print my_health[1]#this wont work as tuples as
+#my_health.append(0)##this wont work as tuples as as tuples are immutable list methods wont work
+print my_health[1]
 creating_dictionaries={"aku":23,23:1111,"o":False}
 print creating_dictionaries[23]
