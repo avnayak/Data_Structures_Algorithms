@@ -2,15 +2,19 @@
 
 #Write a Python program to get the Fibonacci series
 
-fibo=input("Enter the number of integers to implement fibonacci series \n")
-print 1
+n=input("Enter the number of integers to implement fibonacci series \n")
+
 fib=[]
-for i in range(1,fibo):
-	fib.append(i)
-print fib
-for i in range(0,fibo+1):
-	if not(i==(fibo+1)):
+for i in range(1,n):
+	fib.append(i) 
+print " \n "
+print fib 
+print " \n "
+print 1
+for i in range(0,n):
 		d=i+1
-		c=fib[d]
-		print fib[i]+c
-	
+		if d<n-1:
+			c=fib[d]
+			print fib[i]+c
+		else:
+			break
