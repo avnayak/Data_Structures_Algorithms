@@ -13,7 +13,8 @@ would return 2 pairs:
 from itertools import permutations
 def array_sum(arr,k):
 	for i in range(len(arr)+1): 
-		perm = permutations(arr,i+1) 
+		perm = permutations(arr,i+1)
+		#print list(perm) 
 		for i in list(perm):
 	    		if sum(i)==k:
 				print i
