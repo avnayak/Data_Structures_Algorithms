@@ -21,5 +21,5 @@ def large_continuous_sum(arr):
 	y=maxm.pop()
 	print "The large continuous sum is "
 	print y
-arr=[-1,1,-1,1,4,-2,9,-19,9]
+arr=[-1,-1,-2,-3]
 large_continuous_sum(arr)
