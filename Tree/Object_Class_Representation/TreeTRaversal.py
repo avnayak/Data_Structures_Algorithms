@@ -29,20 +29,20 @@ class Node(object):
             res.append(roo.key)
             res = res + self.inorderTraversal(roo.right)
         return res
-    def PreorderTraversal(self, root):
+    def PreorderTraversal(self, roo):
         res = []
-        if root:
-            res.append(root.data)
-            res = res + self.PreorderTraversal(root.left)
-            res = res + self.PreorderTraversal(root.right)
+        if roo:
+            res.append(roo.key)
+            res = res + self.PreorderTraversal(roo.left)
+            res = res + self.PreorderTraversal(roo.right)
         return res
 
-    def PostorderTraversal(self, root):
+    def PostorderTraversal(self, roo):
         res = []
-        if root:
-            res = self.PostorderTraversal(root.left)
-            res = res + self.PostorderTraversal(root.right)
-            res.append(root.key)
+        if roo:
+            res = self.PostorderTraversal(roo.left)
+            res = res + self.PostorderTraversal(roo.right)
+            res.append(roo.key)
         return res
        
 
