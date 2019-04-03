@@ -1,15 +1,9 @@
-''' #leetcode 26
-    Remove Duplicates from Sorted Array'''
+#leetcode 26
 class Solution:
-    def removeDuplicate(self, nums):
-
-        hash_set = set()
-
-        for num in nums:
-            if num in hash_set:
-                hash_set.remove(num)
-            hash_set.add(num)
-
-        return len(hash_set)
-        
-
+    def removeDuplicateFromSortedArray(self, nums):
+         j=0
+         for i in range(1,len(nums)):
+                if nums[i]!=nums[j] :
+                    j+=1
+                    nums[j]=nums[i]
+         return j+1
