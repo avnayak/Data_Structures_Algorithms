@@ -1,15 +1,14 @@
 ''' #leetcode 27
     Remove  Element Array'''
 class Solution:
-    def removeDuplicate(self, nums,val):
+    def removeDuplicate(self, nums,k):
 
         hash_set = []
-
-        for num in nums:
-            if num !=val :
-                hash_set.append(num)
-
-        return len(hash_set)
-
+	j=i+1
+        for i in len(arr):
+            for j in len(arr):
+             	if i==j:
+			if (j-i)<=k:
+				return True
 a=Solution()
 print a.removeDuplicate([3,2,2,3],2)
