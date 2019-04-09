@@ -1,4 +1,3 @@
-import sys
 class Node(object):
      def __init__(self, x):
          self.key = x
@@ -22,18 +21,32 @@ class Node(object):
                     self.right.insert(data)
         else:
             self.data = data
-     def minDepth (self, root ) :
-        if not root :
+    
+    
+    
+     def minDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if root == None:
             return 0
-        if not root.left and not root.right: # o n l y l e a v e s w i l l have 1
-            return 1
-        ans = sys.maxsize
-        if root .left:
-            ans = min ( ans , self.minDepth ( root.left) )
-        if root.right :
-            ans = min ( ans , self.minDepth(root.right) )
-        return ans+1
-        
+
+        depth = 0
+        q = [root]
+        #while len(q) != 0:
+        while q:
+            depth += 1
+            for i in range(0, len(q)):
+                if not q[0].left and not q[0].right:
+                    return depth
+                if q[0].left:
+                    q.append(q[0].left)
+                if q[0].right:
+                    q.append(q[0].right)
+                del q[0]
+
+        return depth
 root=Node(72)
 root.insert(4)
 root.insert(90)
