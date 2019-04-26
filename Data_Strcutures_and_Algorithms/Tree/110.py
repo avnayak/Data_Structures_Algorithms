@@ -1,4 +1,4 @@
-import sys
+# Definition for a binary tree node.
 class Node(object):
      def __init__(self, x):
          self.key = x
@@ -22,22 +22,22 @@ class Node(object):
                     self.right.insert(data)
         else:
             self.data = data
-     def minDepth (self, root ) :
-        if not root :
-            return 0
-        if not root.left and not root.right: # o n l y l e a v e s w i l l have 1
-            return 1
-        ans = sys.maxsize
-        if root .left:
-            ans = min ( ans , self.minDepth ( root.left) )
-        if root.right :
-            ans = min ( ans , self.minDepth(root.right) )
-        return ans+1
-        
-root=Node(72)
-root.insert(4)
-root.insert(90)
-root.insert(70)
-root.insert(459)
-root.insert(29)
-print root.minDepth(root)
+#class Solution(object):
+     def isBalanced(self,root):
+            def buildTree(self,root):
+                if root is None:
+                    return False
+                lh=buildTree(root.left)
+                rh=buildTree(root.right)
+                v=lh-rh
+                if lh ==-2 or rh==-2 or abs(v)>1:
+                    return -2
+                return max( lh , rh )+1
+	    return True
+root=Node(3)
+root.insert(9)
+root.insert(20)
+root.insert(15)
+root.insert(7)
+
+print root.isBalanced(root)
