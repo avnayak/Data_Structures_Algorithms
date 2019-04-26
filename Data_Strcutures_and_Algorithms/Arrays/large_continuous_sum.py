@@ -1,6 +1,12 @@
 '''
 Given an array of integers (positive and negative) find the largest continuous sum.
 '''
+"""
+whenever the sum goes to 0, change the sum to 0
+else continue your sum 
+and whatever the current sum is match with the new sum 
+which ever is the maxm , add it
+"""
 def maximum(nums):
         ThisSum = 0
         MaxSum = -10000
